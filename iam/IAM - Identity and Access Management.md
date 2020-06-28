@@ -81,3 +81,23 @@ sts:AssumeRole
 
 ### Organization
 
+For large organization. It would help the corporations organize their AWS accounts as per the organization chart. 
+
+Say for example, every business unit would get her own account.
+
+There is concept of mater account for an organization.
+Standard account joins the organization, after that its called member account.
+
+You pick a regular/standard account, login using root account, and create an organization. There after, that account is called master account. 
+Then you could invite other account join the organization. The root user of the other account can accept/decline your invite. 
+
+AWS Organization helps with consolidate billing, and better user permission management. 
+User would be allowed to switch from one account to another using switch account feature. (Role Switching User Interface)
+
+Organization would have one master account and zero or many member account(s), and zero of many organization unit(s)
+
+Billing - as soon as the member account is added, her billing is removed and master account would take charge her billing.
+
+User Management - In general, users are removed from member accounts. All users would login via master account or a dedicated user management account. 
+After the user land in the master or dedicated account, she can use the role switch interface to land in another account. 
+That also means, the user would assume a role as long as she is in that account. 
