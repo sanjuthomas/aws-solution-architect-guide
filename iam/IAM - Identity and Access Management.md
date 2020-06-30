@@ -46,7 +46,7 @@ Resource examples - arn:aws:s3:{resourceName}, arn:aws:s3:{resourceName}/*
 
 A policy can be applied to both user and group
 
-Inline policy vs Managed Policies 
+Inline policy vs Managed Policies  (Customer Managed VS AWS Managed)
 
 ### User
 
@@ -101,3 +101,11 @@ Billing - as soon as the member account is added, her billing is removed and mas
 User Management - In general, users are removed from member accounts. All users would login via master account or a dedicated user management account. 
 After the user land in the master or dedicated account, she can use the role switch interface to land in another account. 
 That also means, the user would assume a role as long as she is in that account. 
+
+You can restrict the permission of root account of the member account(s) but not the root account of the master account. 
+Root account of the master account is a dictator! He can do literally anything. 
+
+Service Control Polices (SCP) can be used to restrict AWS account permission while the account is part of an organization.
+
+### Cloud Trail 
+Account wide auditing and API logging. (Tings like logged in when? Not realtime, there is a 15 minutes max lag)
