@@ -40,7 +40,7 @@ collection of statements
 
 By default everything is denied
 
-ARS - Amazon Resource Name 
+ARN - Amazon Resource Name 
 
 Resource examples - arn:aws:s3:{resourceName}, arn:aws:s3:{resourceName}/*
 
@@ -52,18 +52,17 @@ Inline policy vs Managed Policies  (Customer Managed VS AWS Managed)
 
 Human - Principal use user name and password or access key to login 
 once the user name and password is accepted, the user would become authenticated identity
-We can have only 5000 (5K) in an account
+We can have only 5000 users (5K) in an account
 A user can be a member of maximum 10 groups
 
 ### Group
 
-A collection of users. No principal or credential - there is non concept of a group logging into the system
-
+A collection of users. No principal or credential - there is no concept of a group logging into the system
 
 ### Role
 
 A user, application, or aws product/service like Lambda can assume a role temporarily. 
-Support staff wanted an elevated access to do something during crisis. (Break Glass)
+Support staff wanted an elevated access to do something during a crisis. (Break Glass)
 >5000 user scenario 
 Corporate Directory based authentication. 
 Federated/LDAP/Active Directory
@@ -81,7 +80,7 @@ sts:AssumeRole
 
 ### Organization
 
-For large organization. It would help the corporations organize their AWS accounts as per the organization chart. 
+For large organization. It would help the corporations, organize their AWS accounts as per the organization chart. 
 
 Say for example, every business unit would get her own account.
 
@@ -89,9 +88,9 @@ There is concept of mater account for an organization.
 Standard account joins the organization, after that its called member account.
 
 You pick a regular/standard account, login using root account, and create an organization. There after, that account is called master account. 
-Then you could invite other account join the organization. The root user of the other account can accept/decline your invite. 
+Then you could invite other account to join the organization. The root user of the other account can accept/decline your invite. 
 
-AWS Organization helps with consolidate billing, and better user permission management. 
+AWS Organization helps you with consolidated billing, and better user permission management. 
 User would be allowed to switch from one account to another using switch account feature. (Role Switching User Interface)
 
 Organization would have one master account and zero or many member account(s), and zero of many organization unit(s)
